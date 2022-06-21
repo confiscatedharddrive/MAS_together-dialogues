@@ -1,4 +1,4 @@
-#Do you want to listen to something together?, us submod by confiscatedharddrive for Monika After Story.
+#Do you want to listen to something with me?, us submod by confiscatedharddrive for Monika After Story.
 
 init 5 python:
     addEvent(
@@ -167,5 +167,5 @@ menu:
     "I'm taking a quick break.":
         $ persistent._mas_taking_break_from_listening = True
         m 1hua "Alright!"
-        m 7eub "Just go back to the 'Do you want to listen something with me?' topic to let me know when you're ready to keep going."
+        m 7eub "Just go back to the 'Do you want to listen to something with me?' topic to let me know when you're ready to keep going."
 return
