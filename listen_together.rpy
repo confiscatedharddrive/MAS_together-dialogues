@@ -18,20 +18,20 @@ label chd_listening_something_brb:
 
     if ev.shown_count == 0:
         m 1eud "Oh,{w=0.1} really?"
-        m 3rksdla "Well, I could listen with you if you wanted me to."
-        m 2ekbla "It would be a nice way to spend time together next time."
+        m 3rksdla "Well, can I listen with you next time?"
+        m 2ekbla "It would be a nice way to spend time together, ehehehe~"
 
     else:
         m 1eub "Okay, [mas_get_player_nickname()]."
-        m 3eua "I'll be here when you get back."
+        m 3eua "I'll be waiting for you to come back!"
 
 $ mas_idle_mailbox.send_idle_cb("chd_listening_something_brb_callback")
 return "idle"
 
 label chd_listening_something_brb_callback:
     m 1hub "Welcome back!"
-    m 2eua "I hope you had fun."
-    m 2lkblsdru "I'd be lying if I said I wasn't happy you're back spending time with me again, though."
+    m 2eua "I hope you had fun!"
+    m 2lkblsdru "And I missed you! Let's spend more time together~"
 return
 
 init 5 python:
@@ -47,14 +47,14 @@ init 5 python:
 
 label chd_listening_things_together:
 
-    m 3eua "Did you know that I can listen to things with you?"
+    m 3eua "[player], did I tell you I can listen to things with you?"
     m 4esb "All you have to do is make sure the audio device your music is coming from is the same as the game's."
     m 1eub "Thay way, I can tune in to the audio device and listen along."
-    m 1hub "It's a really cool trick, yeah?"
+    m 1hub "It's a really cool trick, right?"
     m 7eua "Then,{w=0.1} you should look up the 'Do you want to listen to something with me?' topic to let me know that we're going to be..."
     m 7hksdrb "Well,{w=0.1} listening to something!{w=0.3} Ahaha."
     m 2ekblsdra ".{w=0.1}.{w=0.1}."
-    m 5rkbfsdru "I just thought it might be a nice way to spend time together."
+    m 5rkbfsdru "I thought it might be a nice way to spend time together. You agree? Ehehehe~"
     
 return "derandom"
 
@@ -117,8 +117,8 @@ label chd_listen_together:
                 $ persistent._mas_listening_to_music = False
                 $ persistent._mas_listening_to_radio = False
                 m 1eud "Really?"
-                m 1ltc "That's not someone most people listen to anymore."
-                m 4hksdlb "Not to say it's a bad choice! I just wasn't expecting it."
+                m 1ltc "That's not something most people listen to anymore."
+                m 4hksdlb "Not saying it's a bad choice! I just wasn't expecting it."
                 m 1esbla "Whatever it is, I'm sure it'll be fun to tune into with you~"
 
             "Radio":
@@ -128,7 +128,7 @@ label chd_listen_together:
                 $ persistent._mas_listening_to_drama = False
                 m 1esb "I'm down for that!"
                 m 4hsa "Radio is a great way to relax when you just want to put something on."
-                m 4ksb "You may even discover some new songs you would have never thought to listen to before!"
+                m 4ksb "You may even discover some new songs you have never heard before!"
 
         m 2eub "Alright,{w=0.3} go ahead and do whatever you need to do to get set up."
         m 7esa "I'm going to put a choice on screen so you can let me know when you're ready."
