@@ -3,6 +3,8 @@ Do stuff with Monika and have her comment on it afterwards! Built upon work star
 This is a simple repo made to expand upon what you can do with Monika, rather than telling her you're going away to do it. 
 
 ### Finished dialogues
-✅ watch together (u/geneTechnician)
-✅ eat together (u/geneTechnician)
-✅ listen together (confiscatedharddrive)
+✔ watch together (u/geneTechnician)
+
+✔ eat together (u/geneTechnician)
+
+✔ listen together (confiscatedharddrive)
