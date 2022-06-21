@@ -4,6 +4,70 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
+            eventlabel="chd_listening_something_brb",
+            category=["be right back"],
+            prompt="I'm going to listen to something",
+            pool=True,
+            unlocked=True,
+        ),
+        markSeen=True
+    )
+
+label chd_listening_something_brb:
+    $ ev = mas_getEV("chd_listening_something_brb")
+
+    if ev.shown_count == 0:
+        m 1eud "Oh,{w=0.1} really?"
+        m 3rksdla "Well, I could listen with you if you wanted me to."
+        m 2ekbla "It would be a nice way to spend time together next time."
+
+    else:
+        m 1eub "Okay, [mas_get_player_nickname()]."
+        m 3eua "I'll be here when you get back."
+
+$ mas_idle_mailbox.send_idle_cb("chd_listening_something_brb_callback")
+return "idle"
+
+label chd_listening_something_brb_callback:
+    m 1hub "Welcome back!"
+    m 2eua "I hope you had fun."
+    m 2lkblsdru "I'd be lying if I said I wasn't happy you're back spending time with me again, though."
+return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="chd_listening_things_together",
+            random=True,
+            pool=False,
+            aff_range=(mas_aff.HAPPY, None)
+        ),
+    )
+
+label chd_listening_things_together:
+
+    m 3eua "Did you know that I can listen to things with you?"
+    m 4esb "All you have to do is make sure the audio your music is coming from is the same as the game's."
+    m 1eub "That will let you resize the game's window so you can place me next to the video player."
+    m 1hub "Or next to whatever else you might want to show me!"
+    m 7eua "Then,{w=0.1} you should look up the 'Do you want to listen to something with me?' topic to let me know that we're going to be..."
+    m 7hksdrb "Well,{w=0.1} listening to something!{w=0.3} Ahaha."
+    m 2ekblsdra ".{w=0.1}.{w=0.1}."
+    m 5rkbfsdru "I just thought it might be a nice way to spend time together."
+    
+return "derandom"
+
+default -5 persistent._mas_taking_break_from_listening = None
+default -5 persistent._mas_listening_to_music = None
+default -5 persistent._mas_listening_to_drama = None
+default -5 persistent._mas_listening_to_podcast = None
+default -5 persistent._mas_listening_to_radio = None
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
             eventlabel="chd_listen_together",
             category=["us"],
             prompt="Do you want to listen to something with me?",
