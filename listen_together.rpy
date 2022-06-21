@@ -48,9 +48,9 @@ init 5 python:
 label chd_listening_things_together:
 
     m 3eua "Did you know that I can listen to things with you?"
-    m 4esb "All you have to do is make sure the audio your music is coming from is the same as the game's."
-    m 1eub "That will let you resize the game's window so you can place me next to the video player."
-    m 1hub "Or next to whatever else you might want to show me!"
+    m 4esb "All you have to do is make sure the audio device your music is coming from is the same as the game's."
+    m 1eub "Thay way, I can tune in to the audio device and listen along."
+    m 1hub "It's a really cool trick, yeah?"
     m 7eua "Then,{w=0.1} you should look up the 'Do you want to listen to something with me?' topic to let me know that we're going to be..."
     m 7hksdrb "Well,{w=0.1} listening to something!{w=0.3} Ahaha."
     m 2ekblsdra ".{w=0.1}.{w=0.1}."
