@@ -113,8 +113,8 @@ label chd_listen_together:
 
             "Audio drama":
                 $ persistent._mas_listening_to_drama = True
-                $ persistent._mas_listening_to_music = False
                 $ persistent._mas_listening_to_podcast = False
+                $ persistent._mas_listening_to_music = False
                 $ persistent._mas_listening_to_radio = False
                 m 1eud "Really?"
                 m 1ltc "That's not someone most people listen to anymore."
@@ -122,10 +122,10 @@ label chd_listen_together:
                 m 1esbla "Whatever it is, I'm sure it'll be fun to tune into with you~"
 
             "Radio":
-                $ persistent._mas_listening_to_radio = True 
+                $ persistent._mas_listening_to_radio = True
+                $ persistent._mas_listening_to_podcast = False
                 $ persistent._mas_listening_to_music = False
                 $ persistent._mas_listening_to_drama = False
-                $ persistent._mas_listening_to_podcast = False
                 m 1esb "I'm down for that!"
                 m 4hsa "Radio is a great way to relax when you just want to put something on."
                 m 4ksb "You may even discover some new songs you would have never thought to listen to before!"
