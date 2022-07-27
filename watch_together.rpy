@@ -155,9 +155,9 @@ label watching_together2:
                 $ persistent._mas_watching_you_draw = False
                 $ persistent._mas_watching_you_game = False
                 $ persistent._mas_watching_you_code = False
-                m "Really?"
-                m "I'd love to watch you animate!"
-                m "The process is so intriguing, it's like magic forming!"
+                m 1wub "Really?"
+                m 1hubla "I'd love to watch you animate!"
+                m 3sublb "The process is so intriguing, it's like magic forming!"
 
         m 2eub "Alright,{w=0.3} go ahead and do whatever you need to do to get set up."
         m 7esa "I'm going to put a choice on screen so you can let me know when you're ready."
@@ -175,7 +175,7 @@ label watching_together2:
         elif persistent._mas_watching_you_game:
             m 3huu "I'll be cheering you on!"
         elif persistent._mas_watching_you_animate:
-            m "Remember, solid drawings mean solid animation!"
+            m 3ksa "Remember, solid drawings mean solid animation!"
         else:
             m 1eub "Let me know when you want to stop or take a break, okay?"
 
