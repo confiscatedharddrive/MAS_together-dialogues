@@ -1,6 +1,4 @@
 #Do you want to watch something with me?, us submod by u/geneTechnician for Monika After Story.
-#ver 1.2.0
-#update notes: added affection gain, added "watch me code", added brb to tell monika you're going to watch something by yourself
 
 init 5 python:
     addEvent(
