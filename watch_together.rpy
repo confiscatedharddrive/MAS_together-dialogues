@@ -66,6 +66,7 @@ default -5 persistent._mas_taking_break_from_watching = None
 default -5 persistent._mas_watching_you_draw = None
 default -5 persistent._mas_watching_you_game = None
 default -5 persistent._mas_watching_you_code = None
+default -5 persistent._mas_watching_you_animate = None
 
 init 5 python:
     addEvent(
@@ -100,6 +101,7 @@ label watching_together2:
                 $ persistent._mas_watching_you_draw = False
                 $ persistent._mas_watching_you_game = False
                 $ persistent._mas_watching_you_code = False
+                $ persistent._mas_watching_you_animate = False
                 m 1rtc "Hm,{w=0.3} I wonder what the genre is going to be..."
                 m 3rua "Action? Horror? Or maybe...{w=0.3}{nw}"
                 extend 1tsblu "Romance?"
@@ -109,6 +111,7 @@ label watching_together2:
                 $ persistent._mas_watching_you_draw = False
                 $ persistent._mas_watching_you_game = False
                 $ persistent._mas_watching_you_code = False
+                $ persistent._mas_watching_you_animate = False
                 m 2eub "That sounds fun!"
                 m 4eua "Letting yourself watch mindless things online for awhile isn't always a bad thing."
                 m 3hublb "And if it lets us spend more time together, that's even better!"
@@ -117,6 +120,7 @@ label watching_together2:
                 $ persistent._mas_watching_you_draw = True
                 $ persistent._mas_watching_you_game = False
                 $ persistent._mas_watching_you_code = False
+                $ persistent._mas_watching_you_animate = False
                 m 2sublo "Really?"
                 m 3ekbla "I know sharing your art with other people can be really difficult sometimes."
                 m 1ekbsu "So the fact you trust me enough to share it with me,{w=0.3} even when it's unfinished,{w=0.1} means a lot to me."
@@ -125,6 +129,7 @@ label watching_together2:
                 $ persistent._mas_watching_you_code = True
                 $ persistent._mas_watching_you_draw = False
                 $ persistent._mas_watching_you_game = False
+                $ persistent._mas_watching_you_animate = False
 
                 if persistent._mas_pm_has_code_experience is False:
                     m 3etd "I thought you didn't know how to code?"
@@ -140,9 +145,19 @@ label watching_together2:
                 $ persistent._mas_watching_you_game = True
                 $ persistent._mas_watching_you_draw = False
                 $ persistent._mas_watching_you_code = False
+                $ persistent._mas_watching_you_animate = False
                 m 1tua "Oh?{w=0.3}{nw} " 
                 extend 3gtb "Are you trying to show off in front of your cute girlfriend?"
                 m 1hublu "Ehehe~{w=0.3} I'm just teasing you, [mas_get_player_nickname()]."
+
+            "Watch me animate":
+                $ persistent._mas_watching_you_animate = True
+                $ persistent._mas_watching_you_draw = False
+                $ persistent._mas_watching_you_game = False
+                $ persistent._mas_watching_you_code = False
+                m "Really?"
+                m "I'd love to watch you animate!"
+                m "The process is so intriguing, it's like magic forming!"
 
         m 2eub "Alright,{w=0.3} go ahead and do whatever you need to do to get set up."
         m 7esa "I'm going to put a choice on screen so you can let me know when you're ready."
@@ -159,6 +174,8 @@ label watching_together2:
             m 7eub "Make sure to keep your code organized and easy to read!"
         elif persistent._mas_watching_you_game:
             m 3huu "I'll be cheering you on!"
+        elif persistent._mas_watching_you_animate:
+            m "Remember, solid drawings mean solid animation!"
         else:
             m 1eub "Let me know when you want to stop or take a break, okay?"
 
